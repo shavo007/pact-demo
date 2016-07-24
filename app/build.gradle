@@ -23,7 +23,13 @@ apply plugin: 'idea'
 jar {
 	baseName = 'pact-demo'
 	version = '0.0.1-SNAPSHOT'
+    manifest {
+        attributes 'Implementation-Title': 'Pact Demo',
+                'Implementation-Version': version
+    }
+
 }
+
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
