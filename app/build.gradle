@@ -66,7 +66,7 @@ test {
 pact {
 
     publish {
-        pactBrokerUrl = 'http://localhost:5000'
+        pactBrokerUrl = 'http://localhost:80'
         version = '1.0'
     }
 
@@ -74,7 +74,7 @@ pact {
         provider1 {
             // Only load the pacts from the broker if the start tasks from the command line include pactVerify
             if ('pactVerify' in gradle.startParameter.taskNames) {
-                hasPactsFromPactBroker('http://localhost:5000/') { consumer ->
+                hasPactsFromPactBroker('http://localhost:80/') { consumer ->
                     stateChange = { providerState -> /* state change code here */ true }
                 }
             }
