@@ -1,0 +1,11 @@
+${AnsiColor.BRIGHT_BLUE}   _______         __        ______    ___________       ________     _______   ___      ___     ______
+${AnsiColor.BRIGHT_BLUE}  |   __ "\       /""\      /" _  "\  ("     _   ")     |"      "\   /"     "| |"  \    /"  |   /    " \
+${AnsiColor.RED}  (. |__) :)     /    \    (: ( \___)  )__/  \\__/      (.  ___  :) (: ______)  \   \  //   |  // ____  \
+${AnsiColor.BRIGHT_RED}  |:  ____/     /' /\  \    \/ \          \\_ /         |: \   ) ||  \/    |    /\\  \/.    | /  /    ) :)
+${AnsiColor.MAGENTA}  (|  /        //  __'  \   //  \ _       |.  |         (| (___\ ||  // ___)_  |: \.        |(: (____/ //
+${AnsiColor.BRIGHT_GREEN} /|__/ \      /   /  \\  \ (:   _) \      \:  |         |:       :) (:      "| |.  \    /:  | \        /
+${AnsiColor.WHITE}(_______)    (___/    \___) \_______)      \__|         (________/   \_______) |___|\__/|___|  \"_____/
+
+${AnsiColor.BRIGHT_BLUE} :: All about Pact! ::  ${AnsiColor.WHITE} Spring Boot Version :: ${AnsiColor.RED} ${spring-boot.formatted-version}
+
+${AnsiColor.YELLOW}  App version:: ${application.formatted-version}

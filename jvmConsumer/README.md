@@ -1,4 +1,4 @@
-#PACT DEMO
+#JVM Consumer
 
 ##Locally
 
@@ -10,12 +10,8 @@ docker-compose --file docker-compose-pact.yml  up --build
 
 ```
 
-* start the API
+* start the microservice if not already started
 
-```
-java -jar app/build/libs/pact-demo-0.0.1-SNAPSHOT.jar
-
-```
 
 * publish pact to pact broker
 
@@ -25,11 +21,3 @@ java -jar app/build/libs/pact-demo-0.0.1-SNAPSHOT.jar
 ```
 
 View the pact has published at http://localhost/ui/relationships
-
-* verify the pact against the API
-
-```
-./gradlew pactVerify
-```
-
-Results of the pact verification can be found at $buildDir/reports/pact

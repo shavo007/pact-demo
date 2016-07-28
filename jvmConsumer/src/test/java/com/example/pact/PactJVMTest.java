@@ -24,7 +24,7 @@ public class PactJVMTest {
     public PactProviderRule mockProvider = new PactProviderRule("provider1", "localhost", 8080, this);
 
 
-    @Pact(provider = "provider1", consumer = "consumer1")
+    @Pact(provider = "provider1", consumer = "jvmConsumer")
     public PactFragment createFragment(PactDslWithProvider builder) {
         Map<String, String> headers = new HashMap<>();
         headers.put("Content-Type", "application/json;charset=UTF-8");

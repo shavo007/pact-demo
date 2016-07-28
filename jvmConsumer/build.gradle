@@ -70,24 +70,6 @@ pact {
         version = '1.0'
     }
 
-    serviceProviders {
-        provider1 {
-            // Only load the pacts from the broker if the start tasks from the command line include pactVerify
-            if ('pactVerify' in gradle.startParameter.taskNames) {
-                hasPactsFromPactBroker('http://localhost:80/') { consumer ->
-                    stateChange = { providerState -> /* state change code here */ true }
-                }
-            }
-        }
-    }
-
-    reports {
-        defaultReports() // adds the standard console output
-
-        markdown // report in markdown format
-        json // report in json format
-    }
-
 }
 
 

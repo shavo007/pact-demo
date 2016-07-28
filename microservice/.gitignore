@@ -76,3 +76,11 @@ app.iws
 out/
 src/main/main.iml
 src/test/test.iml
+### Example user template template
+### Example user template
+
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
