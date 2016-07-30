@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/shavo007/pact-demo.png?label=ready&title=Ready)](https://waffle.io/shavo007/pact-demo)
 # pact-demo
 
 A full end to end demonstration of consumer driven contract testing using pact framework.
