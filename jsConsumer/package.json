@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "Javascript consumer for pact demo",
   "devDependencies": {
-    "@pact-foundation/pact-node": "4.5.1",
+    "@pact-foundation/pact-node": "4.8.0",
     "gulp": "^3.9.1",
-    "jasmine": "^2.4.1",
-    "jasmine-core": "^2.4.1",
-    "karma": "1.1.0",
-    "karma-jasmine": "1.0.2",
-    "karma-pact": "0.0.5",
-    "karma-phantomjs-launcher": "1.0.1",
-    "pact": "^1.0.0-rc.2"
+    "jasmine": "^2.5.3",
+    "jasmine-core": "^2.5.2",
+    "karma": "1.5.0",
+    "karma-jasmine": "1.1.0",
+    "karma-pact": "0.0.7",
+    "karma-phantomjs-launcher": "1.0.2",
+    "pact": "^2.2.0"
   },
-  "dependencies": {
-  },
-  "author": "Joshua Head"
+  "dependencies": {},
+  "author": "Shane Lee"
 }
