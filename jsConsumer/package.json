@@ -2,6 +2,10 @@
   "name": "pact-js-consumer-demo",
   "version": "1.0.0",
   "description": "Javascript consumer for pact demo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/shavo007/pact-demo.git"
+  },
   "devDependencies": {
     "@pact-foundation/pact-node": "4.8.0",
     "gulp": "^3.9.1",
