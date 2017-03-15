@@ -1,10 +1,10 @@
-#JS Consumer - Pact Demo
+# JS Consumer - Pact Demo
 
-##Prerequsities
+## Prerequsities
 * Install node and npm
 * Install gulp globally
 ```
-npm install gulp
+npm install gulp-cli -g
 ```
 
 * Run npm install
