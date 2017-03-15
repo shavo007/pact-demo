@@ -19,10 +19,11 @@ https://waffle.io/shavo007/pact-demo
 [![Stories in Ready](https://badge.waffle.io/shavo007/pact-demo.png?label=ready&title=Ready)](https://waffle.io/shavo007/pact-demo)
 
 
-##Pact broker
+## Pact broker
 
 https://store.docker.com/community/images/shanelee007/docker-pact-postgres
 
-##Resources
+## Resources
 Blog:  http://shavo007.github.io/2016/07/19/consumer-driven-contract-testing-using-pact/
+
 Docker compose file: https://gist.github.com/shavo007/6660cd3230188a094b5d7d3e0647d769
