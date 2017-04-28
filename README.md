@@ -29,17 +29,16 @@ http://www.eq8.eu/blogs/25-common-aws-elastic-beanstalk-docker-issues-and-soluti
 
 eb init
 
-WARNING: Uploaded SSH public key for "aws-eb" into EC2 for region us-east-1.
-
-/Users/shanelee/.ssh/aws-eb.pub
-
-eb local run
-eb local open
-eb local status
 
 
-eb use Sample-env-1
-eb deploy eb use Sample-env-1
+### Commands
+`eb local run`
+`eb local open`
+`eb local status`
+
+
+`eb use Sample-env-1`
+`eb deploy eb use Sample-env-1`
 
 
 
