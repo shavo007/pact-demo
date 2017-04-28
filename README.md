@@ -24,6 +24,9 @@ http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker-ebloc
 
 http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/applications-sourcebundle.html
 
+### Troubleshooting ebs and docker
+http://www.eq8.eu/blogs/25-common-aws-elastic-beanstalk-docker-issues-and-solutions
+
 eb init
 
 WARNING: Uploaded SSH public key for "aws-eb" into EC2 for region us-east-1.
