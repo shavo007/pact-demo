@@ -5,7 +5,7 @@
 			"name": "pact",
 			"image": "dius/pact_broker",
 			"essential": true,
-			"memory": 128,
+			"memory": 256,
 			"links": [
 				"postgres"
 			],

@@ -22,6 +22,8 @@ https://waffle.io/shavo007/pact-demo
 
 http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker-eblocal.html
 
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/applications-sourcebundle.html
+
 eb init
 
 WARNING: Uploaded SSH public key for "aws-eb" into EC2 for region us-east-1.
@@ -31,6 +33,10 @@ WARNING: Uploaded SSH public key for "aws-eb" into EC2 for region us-east-1.
 eb local run
 eb local open
 eb local status
+
+
+eb use Sample-env-1
+eb deploy eb use Sample-env-1
 
 
 
