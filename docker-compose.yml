@@ -1,0 +1,21 @@
+version: '2'
+services:
+  postgres:
+    image: shanelee007/docker-pact-postgres
+    environment:
+      -  POSTGRES_PASSWORD=ThePostgresPassword
+      -  POSTGRES_USER=admin
+    ports:
+      - "5433:5432"
+  pact:
+    image: dius/pact_broker
+    environment:
+      -  PACT_BROKER_DATABASE_NAME=pactbroker
+      -  PACT_BROKER_DATABASE_PASSWORD=TheUserPassword
+      -  PACT_BROKER_DATABASE_HOST=postgres
+      -  PACT_BROKER_DATABASE_USERNAME=pactbrokeruser
+    ports:
+      - "80:80"
+    depends_on:
+        - postgres
+#    entrypoint: ./wait-for-it.sh postgres:5432 -- echo "postgres is up"

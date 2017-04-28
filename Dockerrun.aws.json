@@ -1,0 +1,33 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "volumes": [],
+    "containerDefinitions": [{
+            "name": "pact",
+            "image": "dius/pact_broker",
+            "essential": true,
+            "memory": 256,
+            "portMappings": [{
+                "hostPort": 80,
+                "containerPort": 80
+            }],
+            "environment": [{
+                    "name": "PACT_BROKER_DATABASE_NAME",
+                    "value": "pactbroker"
+                },
+                {
+                    "name": "PACT_BROKER_DATABASE_PASSWORD",
+                    "value": "TheUserPassword"
+                },
+                {
+                    "name": "PACT_BROKER_DATABASE_HOST",
+                    "value": "localhost"
+                },
+                {
+                    "name": "PACT_BROKER_DATABASE_USERNAME",
+                    "value": "pactbrokeruser"
+                }
+            ],
+            "mountPoints": []
+        }
+    ]
+}
