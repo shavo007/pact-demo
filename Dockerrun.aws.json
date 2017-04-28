@@ -1,56 +1,33 @@
 {
-	"AWSEBDockerrunVersion": 2,
-	"volumes": [],
-	"containerDefinitions": [{
-			"name": "pact",
-			"image": "dius/pact_broker",
-			"essential": true,
-			"memory": 256,
-			"links": [
-				"postgres"
-			],
-			"portMappings": [{
-				"hostPort": 80,
-				"containerPort": 80
-			}],
-			"environment": [{
-					"name": "PACT_BROKER_DATABASE_NAME",
-					"value": "pactbroker"
-				},
-				{
-					"name": "PACT_BROKER_DATABASE_PASSWORD",
-					"value": "TheUserPassword"
-				},
-				{
-					"name": "PACT_BROKER_DATABASE_HOST",
-					"value": "postgres"
-				},
-				{
-					"name": "PACT_BROKER_DATABASE_USERNAME",
-					"value": "pactbrokeruser"
-				}
-			],
-			"mountPoints": []
-		},
-		{
-			"name": "postgres",
-			"image": "shanelee007/docker-pact-postgres",
-			"essential": true,
-			"memory": 256,
-			"portMappings": [{
-				"hostPort": 5433,
-				"containerPort": 5432
-			}],
-			"environment": [{
-					"name": "POSTGRES_PASSWORD",
-					"value": "ThePostgresPassword"
-				},
-				{
-					"name": "POSTGRES_USER",
-					"value": "admin"
-				}
-			],
-			"mountPoints": []
-		}
-	]
+    "AWSEBDockerrunVersion": 2,
+    "volumes": [],
+    "containerDefinitions": [{
+            "name": "pact",
+            "image": "dius/pact_broker",
+            "essential": true,
+            "memory": 256,
+            "portMappings": [{
+                "hostPort": 80,
+                "containerPort": 80
+            }],
+            "environment": [{
+                    "name": "PACT_BROKER_DATABASE_NAME",
+                    "value": "${RDS_DB_NAME}"
+                },
+                {
+                    "name": "PACT_BROKER_DATABASE_PASSWORD",
+                    "value": "${RDS_PASSWORD}"
+                },
+                {
+                    "name": "PACT_BROKER_DATABASE_HOST",
+                    "value": "${RDS_HOSTNAME}"
+                },
+                {
+                    "name": "PACT_BROKER_DATABASE_USERNAME",
+                    "value": "${RDS_USERNAME}"
+                }
+            ],
+            "mountPoints": []
+        }
+    ]
 }
