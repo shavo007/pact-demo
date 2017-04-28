@@ -18,6 +18,22 @@ https://waffle.io/shavo007/pact-demo
 
 [![Stories in Ready](https://badge.waffle.io/shavo007/pact-demo.png?label=ready&title=Ready)](https://waffle.io/shavo007/pact-demo)
 
+## Elastic beanstalk
+
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker-eblocal.html
+
+eb init
+
+WARNING: Uploaded SSH public key for "aws-eb" into EC2 for region us-east-1.
+
+/Users/shanelee/.ssh/aws-eb.pub
+
+eb local run
+eb local open
+eb local status
+
+
+
 
 ## Pact broker
 
