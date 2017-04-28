@@ -12,19 +12,19 @@
             }],
             "environment": [{
                     "name": "PACT_BROKER_DATABASE_NAME",
-                    "value": "${RDS_DB_NAME}"
+                    "value": "pactbroker"
                 },
                 {
                     "name": "PACT_BROKER_DATABASE_PASSWORD",
-                    "value": "${RDS_PASSWORD}"
+                    "value": "TheUserPassword"
                 },
                 {
                     "name": "PACT_BROKER_DATABASE_HOST",
-                    "value": "${RDS_HOSTNAME}"
+                    "value": "aa1kkaivfl8elh1.clmglcmngoex.us-east-1.rds.amazonaws.com"
                 },
                 {
                     "name": "PACT_BROKER_DATABASE_USERNAME",
-                    "value": "${RDS_USERNAME}"
+                    "value": "pactbrokeruser"
                 }
             ],
             "mountPoints": []
