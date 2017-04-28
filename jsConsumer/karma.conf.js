@@ -10,7 +10,7 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '**/dist/pact.web.js',
+      '**/dist/pact-web.js',
       '**/*.pact.spec.js'
     ],
 
