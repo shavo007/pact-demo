@@ -1,0 +1,56 @@
+{
+	"AWSEBDockerrunVersion": 2,
+	"volumes": [],
+	"containerDefinitions": [{
+			"name": "pact",
+			"image": "dius/pact_broker",
+			"essential": true,
+			"memory": 128,
+			"links": [
+				"postgres"
+			]
+			"portMappings": [{
+				"hostPort": 80,
+				"containerPort": 80
+			}],
+			"environment": [{
+					"name": "PACT_BROKER_DATABASE_NAME",
+					"value": "pactbroker"
+				},
+				{
+					"name": "PACT_BROKER_DATABASE_PASSWORD",
+					"value": "TheUserPassword"
+				},
+				{
+					"name": "PACT_BROKER_DATABASE_HOST",
+					"value": "postgres"
+				},
+				{
+					"name": "PACT_BROKER_DATABASE_USERNAME",
+					"value": "pactbrokeruser"
+				}
+			],
+			"mountPoints": []
+		},
+		{
+			"name": "postgres",
+			"image": "shanelee007/docker-pact-postgres",
+			"essential": true,
+			"memory": 256,
+			"portMappings": [{
+				"hostPort": 5433,
+				"containerPort": 5432
+			}],
+			"environment": [{
+					"name": "POSTGRES_PASSWORD",
+					"value": "ThePostgresPassword"
+				},
+				{
+					"name": "POSTGRES_USER",
+					"value": "admin"
+				}
+			],
+			"mountPoints": []
+		}
+	]
+}
