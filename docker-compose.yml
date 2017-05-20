@@ -8,12 +8,14 @@ services:
     ports:
       - "5433:5432"
   pact:
-    image: dius/pact_broker
+    image: dius/pact-broker:latest
     environment:
       -  PACT_BROKER_DATABASE_NAME=pactbroker
       -  PACT_BROKER_DATABASE_PASSWORD=TheUserPassword
       -  PACT_BROKER_DATABASE_HOST=postgres
       -  PACT_BROKER_DATABASE_USERNAME=pactbrokeruser
+      -  PACT_BROKER_BASIC_AUTH_USERNAME=shanelee007
+      -  PACT_BROKER_BASIC_AUTH_PASSWORD=password123
     ports:
       - "80:80"
     depends_on:

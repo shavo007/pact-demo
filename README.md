@@ -7,7 +7,13 @@ A full end to end demonstration of consumer driven contract testing using pact f
 
 * Ability to run pact broker locally using docker containers
 * Run and publish pacts for jvm and js consumers
-* Verify against a running microserice
+* Verify against a running microservice
+
+## Pact Broker startup
+
+`docker-compose up --build`
+
+Access at http://localhost:80
 
 [![Join the chat at https://gitter.im/shavo007/pact-demo](https://badges.gitter.im/shavo007/pact-demo.svg)](https://gitter.im/shavo007/pact-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
@@ -43,7 +49,7 @@ eb init
 
 
 
-## Pact broker
+## Pact broker postgres docker container
 
 https://store.docker.com/community/images/shanelee007/docker-pact-postgres
 

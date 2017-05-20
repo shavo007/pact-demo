@@ -13,7 +13,7 @@ docker-compose --file docker-compose-pact.yml  up --build
 * start the API
 
 ```
-java -jar app/build/libs/pact-demo-0.0.1-SNAPSHOT.jar
+java -jar build/libs/pact-demo-0.0.1-SNAPSHOT.jar
 
 ```
 
