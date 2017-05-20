@@ -3,7 +3,7 @@
     "volumes": [],
     "containerDefinitions": [{
             "name": "pact",
-            "image": "dius/pact_broker",
+            "image": "dius/pact-broker",
             "essential": true,
             "memory": 256,
             "portMappings": [{

@@ -4,9 +4,11 @@ const path = require('path');
 
 var opts = {
     pactUrls: [path.resolve(process.cwd(), 'pacts')],             // Array of local Pact files or directories containing them. Required.
-    // pactBroker: 'http://localhost',
-    pactBroker: 'http://sample-env-1.7xryf7dnce.us-east-1.elasticbeanstalk.com',
-    consumerVersion: '2.0'            // URL to fetch the provider states for the given provider API. Optional.
+    pactBroker: 'http://localhost',
+    // pactBroker: 'http://sample-env-1.7xryf7dnce.us-east-1.elasticbeanstalk.com',
+    consumerVersion: '2.0.0',            // URL to fetch the provider states for the given provider API. Optional.
+    pactBrokerUsername: 'shanelee007',
+    pactBrokerPassword: 'password123'
 };
 
 var Server = require('karma').Server;

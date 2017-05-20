@@ -9,14 +9,17 @@ buildscript {
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath 'au.com.dius:pact-jvm-provider-gradle_2.11:3.2.7'
 	}
 }
+
+plugins {
+	id "au.com.dius.pact" version "3.4.0"
+}
+
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
-apply plugin: 'au.com.dius.pact'
 apply plugin: 'idea'
 
 
@@ -67,7 +70,9 @@ pact {
 
     publish {
         pactBrokerUrl = 'http://localhost:80'
-        version = '1.0'
+        pactBrokerUsername = 'shanelee007'
+        pactBrokerPassword = 'password123'
+        version = '1.0.0'
     }
 
 }

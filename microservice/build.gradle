@@ -1,28 +1,32 @@
 buildscript {
-	ext {
-		springBootVersion = '1.4.0.RC1'
-	}
-	repositories {
-		mavenCentral()
-		maven { url "https://repo.spring.io/snapshot" }
-		maven { url "https://repo.spring.io/milestone" }
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-        classpath 'au.com.dius:pact-jvm-provider-gradle_2.11:3.2.7'
-	}
+  ext {
+    springBootVersion = '1.4.0.RC1'
+  }
+  repositories {
+    mavenCentral()
+    maven { url "https://repo.spring.io/snapshot" }
+    maven { url "https://repo.spring.io/milestone" }
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+  }
+}
+
+plugins {
+    id "au.com.dius.pact" version "3.4.0"
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'spring-boot'
-apply plugin: 'au.com.dius.pact'
 apply plugin: 'idea'
 
 
+
+
 jar {
-	baseName = 'pact-demo'
-	version = '0.0.1-SNAPSHOT'
+  baseName = 'pact-demo'
+  version = '0.0.1-SNAPSHOT'
     manifest {
         attributes 'Implementation-Title': 'Pact Demo',
                 'Implementation-Version': version
@@ -34,27 +38,27 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 repositories {
-	mavenCentral()
-	maven { url "https://repo.spring.io/snapshot" }
-	maven { url "https://repo.spring.io/milestone" }
+  mavenCentral()
+  maven { url "https://repo.spring.io/snapshot" }
+  maven { url "https://repo.spring.io/milestone" }
 }
 
 
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-actuator')
-	compile('org.projectlombok:lombok')
-	compile('org.springframework.boot:spring-boot-starter-web')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
+  compile('org.springframework.boot:spring-boot-starter-actuator')
+  compile('org.projectlombok:lombok')
+  compile('org.springframework.boot:spring-boot-starter-web')
+  testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('au.com.dius:pact-jvm-consumer-junit_2.11:3.2.10')
     testCompile('io.rest-assured:rest-assured:3.0.0')
 }
 
 
 eclipse {
-	classpath {
-		 containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-		 containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-	}
+  classpath {
+     containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
+     containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
+  }
 }
 
 
@@ -63,9 +67,10 @@ pact {
 
     serviceProviders {
         provider1 {
+//            publishVerificationResults = true
             // Only load the pacts from the broker if the start tasks from the command line include pactVerify
             if ('pactVerify' in gradle.startParameter.taskNames) {
-                hasPactsFromPactBroker('http://localhost:80/') { consumer ->
+                hasPactsFromPactBroker('http://localhost', authentication: ['Basic', 'shanelee007', 'password123']) { consumer ->
                     stateChange = { providerState -> /* state change code here */ true }
                 }
             }
@@ -80,5 +85,3 @@ pact {
     }
 
 }
-
-
