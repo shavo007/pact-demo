@@ -26,14 +26,15 @@ https://waffle.io/shavo007/pact-demo
 
 ## Running via Elastic beanstalk
 
-Deploy pact broker using elastic beanstalk
+Dockerrun.aws.json file describes how to deploy pact broker container as an Elastic Beanstalk application.
+
 Create eb env and deploy.
 
 * Install CLI
 http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html
 
 
-`eb init` Initializes your directory with the EB CLI. Creates the application.
+* `eb init` Initializes your directory with the EB CLI. Creates the application.
 
 
 http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker-eblocal.html
@@ -45,13 +46,14 @@ http://www.eq8.eu/blogs/25-common-aws-elastic-beanstalk-docker-issues-and-soluti
 
 
 ### Useful Commands
-`eb local run`  Runs commands on your local machine.
-`eb local open` Open pact broker locally in browser
-`eb local status`  Gets environment information and status locally
+
+* `eb local run`  Runs commands on your local machine.
+* `eb local open` Open pact broker locally in browser
+* `eb local status`  Gets environment information and status locally
 
 
-`eb use Sample-env-1`
-`eb deploy eb use Sample-env-1`
+* `eb use Sample-env-1`
+* `eb deploy eb use Sample-env-1`
 
 
 
