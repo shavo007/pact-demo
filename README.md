@@ -24,7 +24,17 @@ https://waffle.io/shavo007/pact-demo
 
 [![Stories in Ready](https://badge.waffle.io/shavo007/pact-demo.png?label=ready&title=Ready)](https://waffle.io/shavo007/pact-demo)
 
-## Elastic beanstalk
+## Running via Elastic beanstalk
+
+Deploy pact broker using elastic beanstalk
+Create eb env and deploy.
+
+* Install CLI
+http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html
+
+
+`eb init` Initializes your directory with the EB CLI. Creates the application.
+
 
 http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_docker-eblocal.html
 
@@ -33,14 +43,11 @@ http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/applications-sourcebundle.
 ### Troubleshooting ebs and docker
 http://www.eq8.eu/blogs/25-common-aws-elastic-beanstalk-docker-issues-and-solutions
 
-eb init
 
-
-
-### Commands
-`eb local run`
-`eb local open`
-`eb local status`
+### Useful Commands
+`eb local run`  Runs commands on your local machine.
+`eb local open` Open pact broker locally in browser
+`eb local status`  Gets environment information and status locally
 
 
 `eb use Sample-env-1`
