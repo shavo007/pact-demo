@@ -13,7 +13,7 @@ A full end to end demonstration of consumer driven contract testing using pact f
 
 `docker-compose up --build`
 
-Access at http://localhost:80
+Access at http://localhost:80 (Basic auth is username:shanelee007/password:password123)
 
 [![Join the chat at https://gitter.im/shavo007/pact-demo](https://badges.gitter.im/shavo007/pact-demo.svg)](https://gitter.im/shavo007/pact-demo?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
