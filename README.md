@@ -53,7 +53,8 @@ http://www.eq8.eu/blogs/25-common-aws-elastic-beanstalk-docker-issues-and-soluti
 
 
 * `eb use Sample-env-1`
-* `eb deploy eb use Sample-env-1`
+* `eb deploy `
+* `eb use Sample-env-1`
 
 
 
