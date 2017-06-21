@@ -1,0 +1,37 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    io.kompose.service: pact
+  name: pact
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: pact
+    spec:
+      containers:
+      - env:
+        - name: PACT_BROKER_DATABASE_NAME
+          value: pactbroker
+        - name: PACT_BROKER_DATABASE_PASSWORD
+          value: TheUserPassword
+        - name: PACT_BROKER_DATABASE_HOST
+          value: postgres
+        - name: PACT_BROKER_DATABASE_USERNAME
+          value: pactbrokeruser
+        - name: PACT_BROKER_BASIC_AUTH_USERNAME
+          value: shanelee007
+        - name: PACT_BROKER_BASIC_AUTH_PASSWORD
+          value: password123
+        image: dius/pact-broker:latest
+        name: pact
+        ports:
+        - containerPort: 80
+        resources: {}
+      restartPolicy: Always
+status: {}
