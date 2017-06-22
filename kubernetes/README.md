@@ -6,14 +6,25 @@
 * Install kubectl
 * Setup cluster
 
+`minikube start --disk-size="70g"`
+`minikube status`
+`kubectl cluster-info`
+`kubectl get pods --namespace=kube-system`
+
+`minikube addons list`
+`kubectl get pods --namespace=kube-system`
+
+
 
 ## Dashboard
 
-minikube dashboard
+`minikube dashboard`
 
 ## Run pact broker
 
-kubectl create -f ./kubernetes
+
+`kubectl create -f kubernetes/postgres-deployment.yaml`
+`kubectl create -f kubernetes/pact-deployment.yaml`
 
 ## Verify services, pods, deployments
 
@@ -22,4 +33,11 @@ $ kubectl get services                          # List all services in the names
 $ kubectl get pods --all-namespaces             # List all pods in all namespaces
 $ kubectl get pods -o wide                      # List all pods in the namespace, with more details
 
-$ kubectl logs -f postgres-432495280-2ghwf
+Get URI for pact
+`minikube service pact --url`
+
+Access it in the browser
+
+### Resources
+
+https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/#accessing-the-service
