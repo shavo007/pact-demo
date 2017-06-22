@@ -7,11 +7,16 @@
 * Setup cluster
 
 `minikube start --disk-size="70g"`
+
 `minikube status`
+
 `kubectl cluster-info`
+
 `kubectl get pods --namespace=kube-system`
 
+
 `minikube addons list`
+
 `kubectl get pods --namespace=kube-system`
 
 
@@ -24,6 +29,7 @@
 
 
 `kubectl create -f kubernetes/postgres-deployment.yaml`
+
 `kubectl create -f kubernetes/pact-deployment.yaml`
 
 ## Verify services, pods, deployments
@@ -34,6 +40,7 @@ $ kubectl get pods --all-namespaces             # List all pods in all namespace
 $ kubectl get pods -o wide                      # List all pods in the namespace, with more details
 
 Get URI for pact
+
 `minikube service pact --url`
 
 Access it in the browser
