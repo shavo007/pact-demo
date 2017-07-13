@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: pact-postgres
+  labels:
+    app: pact
+spec:
+  ports:
+    - port: 5432
+  selector:
+    app: pact
+    tier: postgres
+---
+
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: pact-postgres
+  creationTimestamp: null
+  labels:
+    app: pact
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: pact
+        tier: postgres
+    spec:
+      containers:
+      - env:
+        - name: POSTGRES_PASSWORD
+          value: ThePostgresPassword
+        - name: POSTGRES_USER
+          value: admin
+        image: shanelee007/docker-pact-postgres
+        name: postgres
+        ports:
+        - containerPort: 5432
+        resources: {}
+      restartPolicy: Always
