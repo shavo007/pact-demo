@@ -6,18 +6,14 @@
 * Install kubectl
 * Setup cluster
 
-`minikube start --disk-size="70g"`
+```
+minikube start --disk-size="10g --memory="4096"
 
-`minikube status`
+minikube status
 
-`kubectl cluster-info`
+kubectl cluster-info
+```
 
-`kubectl get pods --namespace=kube-system`
-
-
-`minikube addons list`
-
-`kubectl get pods --namespace=kube-system`
 
 
 
@@ -28,9 +24,11 @@
 ## Run pact broker
 
 
-`kubectl create -f kubernetes/postgres-deployment.yaml`
+```
+kubectl create -f kubernetes/postgres-deployment.yaml
 
-`kubectl create -f kubernetes/pact-deployment.yaml`
+kubectl create -f kubernetes/pact-deployment.yaml
+```
 
 ## Verify services, pods, deployments
 
