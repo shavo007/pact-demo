@@ -6,7 +6,7 @@ services:
       -  POSTGRES_PASSWORD=ThePostgresPassword
       -  POSTGRES_USER=admin
     ports:
-      - "5433:5432"
+      - "5432:5432"
     healthcheck:
       test: ["CMD-SHELL", "psql -h 'localhost' -U 'admin' -c '\\l'"]
       interval: 30s

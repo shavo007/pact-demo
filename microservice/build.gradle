@@ -1,6 +1,6 @@
 buildscript {
   ext {
-    springBootVersion = '1.4.0.RC1'
+    springBootVersion = '1.5.4.RELEASE'
   }
   repositories {
     mavenCentral()
@@ -8,20 +8,24 @@ buildscript {
     maven { url "https://repo.spring.io/milestone" }
   }
   dependencies {
-    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
   }
 }
 
 plugins {
     id "au.com.dius.pact" version "3.4.0"
+    id "com.gorylenko.gradle-git-properties" version "1.4.17"
+    id "org.springframework.boot" version "1.5.4.RELEASE"
 }
 
 apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'spring-boot'
-apply plugin: 'idea'
 
+springBoot  {
+    buildInfo()
+}
 
+gitProperties {
+    gitRepositoryRoot = new File("${project.rootDir}/..")
+}
 
 
 jar {
@@ -51,14 +55,6 @@ dependencies {
   testCompile('org.springframework.boot:spring-boot-starter-test')
     testCompile('au.com.dius:pact-jvm-consumer-junit_2.11:3.2.10')
     testCompile('io.rest-assured:rest-assured:3.0.0')
-}
-
-
-eclipse {
-  classpath {
-     containers.remove('org.eclipse.jdt.launching.JRE_CONTAINER')
-     containers 'org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8'
-  }
 }
 
 
