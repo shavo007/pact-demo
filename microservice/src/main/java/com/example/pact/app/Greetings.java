@@ -7,6 +7,7 @@ import lombok.Data;
 @Builder
 public class Greetings {
 
+    @Builder.Default
     private String salutation = "Mr.";
     private String name;
 }
