@@ -33,10 +33,11 @@ kubectl create -f kubernetes/pact-deployment.yaml
 ## Verify services, pods, deployments
 
 ###  Get commands with basic output
+```
 $ kubectl get services                          # List all services in the namespace
 $ kubectl get pods --all-namespaces             # List all pods in all namespaces
 $ kubectl get pods -o wide                      # List all pods in the namespace, with more details
-
+```
 Get URI for pact
 
 `minikube service pact --url`
