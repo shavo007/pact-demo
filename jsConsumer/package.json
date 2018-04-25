@@ -7,15 +7,15 @@
     "url": "git://github.com/shavo007/pact-demo.git"
   },
   "devDependencies": {
-    "@pact-foundation/pact-node": "^4.9.2",
-    "gulp": "^3.9.1",
-    "jasmine": "^2.5.3",
-    "jasmine-core": "^2.6.2",
+    "@pact-foundation/pact-node": "4.12.0",
+    "gulp": "3.9.1",
+    "jasmine": "2.99.0",
+    "jasmine-core": "2.99.1",
     "karma": "1.7.0",
     "karma-jasmine": "1.1.0",
     "karma-pact": "0.0.7",
     "karma-phantomjs-launcher": "1.0.4",
-    "pact": "^2.5.0"
+    "pact": "2.7.0"
   },
   "dependencies": {},
   "author": "Shane Lee"
