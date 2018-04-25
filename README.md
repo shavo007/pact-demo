@@ -70,7 +70,7 @@ http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/eb-cli3-install.html
 https://store.docker.com/community/images/shanelee007/docker-pact-postgres
 
 ## Resources
-Blog:  http://shavo007.github.io/2016/07/19/consumer-driven-contract-testing-using-pact/
+Blog: https://blog.shanelee.name/2016/07/19/consumer-driven-contract-testing-using-pact/
 
 Docker compose file: https://gist.github.com/shavo007/6660cd3230188a094b5d7d3e0647d769
 
