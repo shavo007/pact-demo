@@ -14,12 +14,12 @@
     "publishPact": "node publishPact.js"
   },
   "devDependencies": {
-    "@pact-foundation/pact": "^5.9.0",
-    "@pact-foundation/pact-node": "^6.16.0",
-    "axios": "^0.14.0",
-    "chai": "^3.5.0",
-    "mocha": "^3.5.3",
-    "rimraf": "^2.6.2"
+    "@pact-foundation/pact": "5.9.0",
+    "@pact-foundation/pact-node": "6.16.0",
+    "axios": "0.14.0",
+    "chai": "3.5.0",
+    "mocha": "3.5.3",
+    "rimraf": "2.6.2"
   },
   "dependencies": {},
   "author": "Shane Lee"
