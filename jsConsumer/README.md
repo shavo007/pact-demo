@@ -1,20 +1,18 @@
 # JS Consumer - Pact Demo
 
 ## Prerequsities
-* Install node and npm
-* Install gulp globally
-```
-npm install gulp-cli -g
-```
+* Install node, npm and yarn
 
-* Run npm install
+`nvm use`
 
-## Gulp Tasks
- - createPacts
- 	This is used to run and validate pact tests and generate pact json files
+`curl -o- -L https://yarnpkg.com/install.sh | bash`
+
+
+* Run yarn
+
+## Yarn Tasks
+ - test
+     This is used to run and validate pact tests and generate pact json files
 
  - publishPacts
- 	This is used for creating pacts then pushing to the broker server
-
- - pact
- 	Shortcut for above tasks
+     This is used for creating pacts then pushing to the broker server

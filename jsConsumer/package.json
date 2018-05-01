@@ -2,20 +2,24 @@
   "name": "pact-js-consumer-demo",
   "version": "1.0.0",
   "description": "Javascript consumer for pact demo",
+  "engines": {
+    "node": ">=8"
+  },
   "repository": {
     "type": "git",
     "url": "git://github.com/shavo007/pact-demo.git"
   },
+  "scripts": {
+    "test": "rimraf pacts && NODE_ENV=test mocha",
+    "publishPact": "node publishPact.js"
+  },
   "devDependencies": {
-    "@pact-foundation/pact-node": "4.12.0",
-    "gulp": "3.9.1",
-    "jasmine": "2.99.0",
-    "jasmine-core": "2.99.1",
-    "karma": "1.7.0",
-    "karma-jasmine": "1.1.0",
-    "karma-pact": "0.0.7",
-    "karma-phantomjs-launcher": "1.0.4",
-    "pact": "2.7.0"
+    "@pact-foundation/pact": "^5.9.0",
+    "@pact-foundation/pact-node": "^6.16.0",
+    "axios": "^0.14.0",
+    "chai": "^3.5.0",
+    "mocha": "^3.5.3",
+    "rimraf": "^2.6.2"
   },
   "dependencies": {},
   "author": "Shane Lee"

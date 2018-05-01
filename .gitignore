@@ -20,3 +20,5 @@ jsConsumer/pacts/
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
+
+yarn-error.log
