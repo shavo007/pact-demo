@@ -1,14 +1,14 @@
 version: '2'
 services:
   postgres:
-    image: shanelee007/docker-pact-postgres
+    image: shanelee007/docker-pact-postgres:latest@sha256:2046574416d2854191056f676d4301ad32aacbc6a46179bf452904e36dddbb53
     environment:
       -  POSTGRES_PASSWORD=ThePostgresPassword
       -  POSTGRES_USER=admin
     ports:
       - "5433:5432"
   pact:
-    image: dius/pact-broker:latest
+    image: dius/pact-broker:latest@sha256:b17d04f78509ec153d8ae26e3cd51446fd731c514027d3bf653cc05d8fd6b16f
     environment:
       -  PACT_BROKER_DATABASE_NAME=pactbroker
       -  PACT_BROKER_DATABASE_PASSWORD=TheUserPassword
