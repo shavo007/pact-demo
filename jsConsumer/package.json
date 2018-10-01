@@ -15,7 +15,7 @@
   },
   "devDependencies": {
     "@pact-foundation/pact": "6.0.2",
-    "@pact-foundation/pact-node": "6.16.0",
+    "@pact-foundation/pact-node": "6.19.11",
     "axios": "0.18.0",
     "chai": "3.5.0",
     "mocha": "5.2.0",
