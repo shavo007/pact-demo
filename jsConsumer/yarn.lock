@@ -2,27 +2,7 @@
 # yarn lockfile v1
 
 
-"@pact-foundation/pact-node@6.16.0":
-  version "6.16.0"
-  resolved "https://registry.yarnpkg.com/@pact-foundation/pact-node/-/pact-node-6.16.0.tgz#1aee35dc0fa256c850018734f541c280c09eaa74"
-  dependencies:
-    "@types/bunyan" "1.8.2"
-    "@types/q" "1.0.7"
-    bunyan "1.8.12"
-    bunyan-prettystream "0.1.3"
-    caporal "0.10.0"
-    chalk "2.3.1"
-    check-types "7.3.0"
-    decompress "4.2.0"
-    mkdirp "0.5.1"
-    q "1.5.1"
-    request "2.83.0"
-    tar "4.4.0"
-    underscore "1.8.3"
-    unixify "1.0.0"
-    url-join "4.0.0"
-
-"@pact-foundation/pact-node@^6.16.1":
+"@pact-foundation/pact-node@6.19.11", "@pact-foundation/pact-node@^6.16.1":
   version "6.19.11"
   resolved "https://registry.yarnpkg.com/@pact-foundation/pact-node/-/pact-node-6.19.11.tgz#32cf87d029ac4b7e48ec723b4d8aeeaabdee6c39"
   dependencies:
@@ -1806,7 +1786,7 @@ unpipe@1.0.0, unpipe@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/unpipe/-/unpipe-1.0.0.tgz#b2bf4ee8514aae6165b4817829d21b2ef49904ec"
 
-url-join@4.0.0, url-join@^4.0.0:
+url-join@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/url-join/-/url-join-4.0.0.tgz#4d3340e807d3773bda9991f8305acdcc2a665d2a"
 
