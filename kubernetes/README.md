@@ -46,6 +46,21 @@ Access it in the browser
 -   username: shanelee007
 -   password: password123
 
+## Linkerd (service mesh)
+
+```
+linkerd inject pact-deployment.yaml \
+  | kubectl apply -f -
+```
+
+### Explore linkerd
+
+`linkerd dashboard`
+
+This command retrieves all of the deployments running in the default namespace, runs the set of Kubernetes resources through inject, and finally reapplies it to the cluster.
+
 ### Resources
 
 https://kubernetes.io/docs/concepts/services-networking/connect-applications-service/#accessing-the-service
+
+https://linkerd.io/2/adding-your-service/index.html
