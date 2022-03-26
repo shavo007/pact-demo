@@ -14,7 +14,7 @@
     "publishPact": "node publishPact.js"
   },
   "devDependencies": {
-    "@pact-foundation/pact": "6.0.2",
+    "@pact-foundation/pact": "9.17.3",
     "@pact-foundation/pact-node": "6.20.0",
     "axios": "0.18.0",
     "chai": "4.2.0",
